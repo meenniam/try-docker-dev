@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+    firstapi:
+        command: npm run dev
+        container_name: first-api-development
+        build: .
+        expose: 
+            - 8080
+        ports: 
+            - 8080:8080
+        volumes:
+            - ./first-api:/app
+            - /app/node_modules
+
+    secondapi:
+        command: npm run dev
+        container_name: second-api-development
+        build: .
+        expose: 
+            - 8081
+        ports: 
+            - 8081:8081
+        volumes:
+            - ./second-api:/app
+            - /app/node_modules
+
+
