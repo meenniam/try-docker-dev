@@ -1,5 +1,8 @@
+
+
 how to run docker-compose dev:
-    "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up" (if you want to run docker deamon just add -d)
+    "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up" 
+    (if you want to run docker deamon(run background) just add -d)
 
 or:
 
