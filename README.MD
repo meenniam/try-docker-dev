@@ -1,14 +1,15 @@
 
 
-how to run docker-compose dev:
-    "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up" 
-    (if you want to run docker deamon(run background) just add -d)
+    how to run docker-compose dev:
 
-or:
+        "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up" 
+        (if you want to run docker deamon(run background) just add -d)
 
-    create file {filename}.sh
-    and add command above in this file 
-    and then you just run:
-        "sh {filename}.sh"
+    or:
+
+        create file {filename}.sh
+        and add command above in this file 
+        and then you just run:
+            "sh {filename}.sh"
 
 
