@@ -7,7 +7,6 @@ RUN mkdir /app
 WORKDIR /app
 COPY . .
 
-RUN npm install -g nodemon
 RUN npm install
 
 CMD ["npm", "run", "start"]

@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    firstapi:
+        build: .
+        ports: 
+            - "8080:8080"
+
+    secondapi:
+        build: .
+        ports: 
+            - "8081:8081"
+
+# networks: 
+#     try-api:
