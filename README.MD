@@ -3,7 +3,7 @@
     first we have to build image:
 
         "docker build -t {imageName}" -f {dockerfileName} {pathToDockerFile}
-        example docker build -t try-multi-api dockerfile.dev .
+        example docker build -t try-multi-api -f dockerfile.dev .
     
     how to run docker-compose dev:
 
@@ -17,4 +17,6 @@
         and then you just run:
             "sh {filename}.sh"
 
+    stop docker-compose:
 
+        docker-compose stop
