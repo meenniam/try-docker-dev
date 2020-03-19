@@ -1,13 +1,38 @@
 version: "3.7"
 services:
     firstapi:
-        image: try-multi-api:latest
-        # build: .
+        image: try-multi-api
         ports: 
             - "8080:8080"
+        networks: 
+            - api-net
 
     secondapi:
-        image: try-multi-api:latest
-        # build: .
+        image: try-multi-api
         ports: 
             - "8081:8081"
+        networks: 
+            - api-net
+            
+
+    reverse_proxy_api:
+        image: nginx:latest
+        container_name: reverse_proxy_api
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./nginx:/etc/nginx/conf.d
+        depends_on:
+            - firstapi
+            - secondapi
+        links:
+            - firstapi
+            - secondapi
+        restart: always
+        networks: 
+            - api-net
+
+networks:
+    api-net:
+        driver: bridge

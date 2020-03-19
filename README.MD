@@ -1,5 +1,10 @@
 
 
+    first we have to build image:
+
+        "docker build -t {imageName}" -f {dockerfileName} {pathToDockerFile}
+        example docker build -t try-multi-api dockerfile.dev .
+    
     how to run docker-compose dev:
 
         "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up" 

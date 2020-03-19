@@ -4,13 +4,13 @@ const app = express();
 
 app.get('/test',(req, res)=>{
     res.json({
-        data: 'test'
+        data: 'api2/test'
     })
 })
 
-app.get('/test2',(req, res)=>{
+app.get('/test1',(req, res)=>{
     res.json({
-        data: 'test2'
+        data: 'api2/test1'
     })
 })
 
